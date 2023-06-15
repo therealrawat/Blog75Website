@@ -1,0 +1,240 @@
+<div class="wrapper">
+
+    <div class="content">
+
+
+        <div class="heading">
+            <p>{{title}}</p>
+        </div>
+
+
+        <div class="container mt-4  mat-elevation-z4">
+            <mat-stepper #stepper>
+                <mat-step [stepControl]="myForm">
+                    <br>
+                    <form [formGroup]="myForm">
+                        <ng-template matStepLabel>Employee Details</ng-template>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="employeeName" required>
+
+                            <em *ngIf="employeeName && employeeName.invalid && employeeName.touched"
+                                style="color: red;">Invalid Employee Name</em>
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>ID</mat-label>
+                            <input matInput formControlName="employeeId" required>
+                            <em *ngIf="employeeId && employeeId.invalid && employeeId.touched"
+                                style="color: red;">Invalid Employee ID</em>
+                        </mat-form-field>
+
+                        <br>
+
+                        <!-- <mat-form-field appearance="fill">
+                    <mat-label>Month</mat-label>
+                    <mat-select formControlName="month">
+                        <mat-option [value]="1">January</mat-option>
+                        <mat-option [value]="2">Febuary</mat-option>
+                        <mat-option [value]="3">March</mat-option>
+                        <mat-option [value]="4">April</mat-option>
+                        <mat-option [value]="5">May</mat-option>
+                        <mat-option [value]="6">June</mat-option>
+                        <mat-option [value]="7">July</mat-option>
+                        <mat-option [value]="8">August</mat-option>
+                        <mat-option [value]="9">September</mat-option>
+                        <mat-option [value]="10">October</mat-option>
+                        <mat-option [value]="11">Noveber</mat-option>
+                        <mat-option [value]="12">December</mat-option>
+                    </mat-select>
+                    <em *ngIf="month && month.invalid && month.touched"  style="color: red;">Plese select a month</em>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Year</mat-label>
+                    <mat-select formControlName="year">
+                        <mat-option *ngFor="let element of Year" [value]="element.value">
+                            {{element.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                    <em *ngIf="year && year.invalid && year.touched"  style="color: red;">Plese select an year</em>
+                </mat-form-field> -->
+
+                        <div>
+                            <button mat-button matStepperNext
+                                [disabled]=" employeeName && employeeName.invalid || employeeId && employeeId.invalid">Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+
+
+                <!-- Company -->
+
+                <mat-step [stepControl]="myForm" label="Company Details">
+                    <form [formGroup]="myForm">
+
+                        <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Company Name</mat-label>
+                            <input matInput formControlName="companyName">
+                            <em *ngIf="companyName && companyName.invalid && companyName.touched"
+                                style="color: red;">Invalid Credentials</em>
+
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Company Address</mat-label>
+                            <input matInput formControlName="companyAddress">
+                            <em *ngIf="companyAddress && companyAddress.invalid && companyAddress.touched"
+                                style="color: red;">Invalid Credentials</em>
+                        </mat-form-field>
+
+
+                        <br>
+
+                        <mat-form-field>
+                            <mat-label>Designation</mat-label>
+                            <mat-select formControlName="designation">
+                                <mat-option *ngFor="let element of posts" [value]="element.postId">
+                                    {{element.postName}}
+                                </mat-option>
+                            </mat-select>
+                            <em *ngIf="designation && designation.invalid && designation.touched"
+                                style="color: red;"></em>
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field>
+                            <mat-label>Department</mat-label>
+                            <mat-select formControlName="departmentId">
+                                <mat-option *ngFor="let element of Department" [value]="element.departmentId">
+                                    {{element.departmentName}}
+                                </mat-option>
+                                <em *ngIf="departmentId && departmentId.invalid && departmentId.touched"
+                                    style="color: red;"></em>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext
+                                [disabled]="companyName && companyName.invalid || companyAddress && companyAddress.invalid || designation && designation.invalid || departmentId && departmentId.invalid">Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+
+                <!-- company details ends here -->
+
+                <!-- bank details -->
+
+                <mat-step [stepControl]="myForm" label="Bank Details">
+                    <form [formGroup]="myForm">
+                        <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Bank Name</mat-label>
+                            <input matInput formControlName="bankName">
+                            <em *ngIf="bankName && bankName.invalid && bankName.touched" style="color: red;">Please
+                                Enter valid bank name</em>
+
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Ac No</mat-label>
+                            <input matInput formControlName="bankAcno">
+                            <em *ngIf="bankAcno && bankAcno.invalid && bankAcno.touched" style="color: red;">Account
+                                number need to be max 12 digit</em>
+
+                        </mat-form-field>
+
+                        <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>UAN</mat-label>
+                            <input matInput formControlName="uan">
+                            <em *ngIf="uan && uan.invalid && uan.touched" style="color: red;">Please enter a valid
+                                uan</em>
+
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>PF No</mat-label>
+                            <input matInput formControlName="pfno">
+                            <em *ngIf="pfno && pfno.invalid && pfno.touched" style="color: red;">Please Enter valid PF
+                                Number</em>
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>ESI No</mat-label>
+                            <input matInput formControlName="esino">
+                            <em *ngIf="esino && esino.invalid && esino.touched" style="color: red;">Please Enter valid
+                                ESI Number</em>
+                        </mat-form-field>
+
+
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext
+                                [disabled]=" bankName && bankName.invalid || bankAcno && bankAcno.invalid || uan && uan.invalid || pfno && pfno.invalid || esino && esino.invalid">Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+
+                <!-- bank details ends here -->
+
+                <!-- pay details -->
+                <mat-step [stepControl]="myForm" label="Salary Details">
+                    <form [formGroup]="myForm">
+                        <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Basic Pay</mat-label>
+                            <input matInput formControlName="basicPay">
+                            <em *ngIf="basicPay && basicPay.invalid && basicPay.touched" style="color: red;">Field need
+                                to be in numberic only</em>
+                        </mat-form-field>
+
+                        &nbsp; &nbsp;
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>HRA</mat-label>
+                            <input matInput formControlName="hra">
+                            <em *ngIf="hra && hra.invalid && hra.touched" style="color: red;">Field need to be in
+                                numberic only</em>
+                        </mat-form-field>
+
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext
+                                [disabled]=" basicPay && basicPay.invalid || hra && hra.invalid">Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+
+                <!-- pay details ends here -->
+
+                <mat-step>
+                    <ng-template matStepLabel>Done</ng-template>
+                    <p>You are now done.</p>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+
+                        <button mat-button color="primary" [disabled]="myForm.invalid"
+                            (click)="UpdateData(myForm.value)">Submit</button>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

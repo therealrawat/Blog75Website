@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    font-weight: 300;
+  }

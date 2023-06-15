@@ -1,0 +1,86 @@
+.heading {
+    background-color: #673ab7;
+    color: #f0eaf9;
+    padding-top: 5.5em;
+    padding-bottom: 5.5em;
+    padding-left: 20px;
+    height: 55vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-main
+{
+    content: "";
+    position: absolute;
+    background-image: url(https://www.smartdatainc.com/wp-content/themes/smartdata/assets/new_pages/06/img/logo.svg);
+    background-size: 600px;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+    opacity: .2;
+    z-index: 0;
+}
+
+.heading h1 {
+    font-size: 56px;
+    font-weight: 700;
+    /* padding: 0; */
+    padding: 15px 5px !important;
+    z-index: 1;
+}
+
+.heading h2 {
+    font-size: 20px;
+    font-weight: 300;
+    z-index: 1;
+}
+
+button {
+    padding: 1em 1.5em !important;
+    margin: 2em;
+    z-index: 1;
+}
+
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    height: 50px;
+}
+
+
+.main-container
+{
+    padding: 16px;
+    width: 75%;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.about
+{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0;
+}
+.about1
+{
+    color: #0000008a;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}

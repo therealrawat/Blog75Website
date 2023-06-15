@@ -1,0 +1,277 @@
+<div class="wrapper">
+
+    <div class="content">
+
+        <div class="heading">
+            <p>{{title}}</p>
+        </div>
+        <button mat-icon-button class="button-fixed" color="primary" (click)="SavePDF()">
+            <mat-icon>download</mat-icon>
+        </button>
+
+
+        <div class="container mt-5 mb-5" id="content" #content>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center lh-1 mb-4">
+                        <h1 class="fw-bold">{{companyName}}</h1> <span class="fw-normal"> {{Address}}</span>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">Employee ID</span> <small
+                                            class="ms-3">{{employeeId}}</small> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">Employee Name</span> <small
+                                            class="ms-3">{{EmployeeName}}</small> </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">Designation</span> <small
+                                            class="ms-3">{{designation}}</small> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">Department</span> <small
+                                            class="ms-3">{{departmentName}}</small> </div>
+                                </div>
+                            </div>
+
+
+                            <br>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">Bank</span> <small class="ms-3">{{bankName}}</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">Account No.</span> <small
+                                            class="ms-3">{{bankAcno}}</small> </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">PF No.</span> <small class="ms-3">{{pfno}}</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div> <span class="fw-bolder">ESI No.</span> <small class="ms-3">{{esino}}</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div> <span class="fw-bolder">UA No.</span> <small class="ms-3">{{uan}}</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <table class="mt-4 table table-bordered">
+                            <thead class="bg-dark text-white">
+                                <tr>
+                                    <th scope="col">Earnings</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Deductions</th>
+                                    <th scope="col">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Basic</th>
+                                    <td>₹ {{basicPay}}</td>
+                                    <th>EPF</th>
+                                    <td>₹ {{epf}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">HRA</th>
+                                    <td>₹ {{hra}}</td>
+                                    <th>ESI</th>
+                                    <td>₹ {{esi}}</td>
+                                </tr>
+                                <!-- <tr>
+                            <th scope="row">HRA</th>
+                            <td>1650.00 </td>
+                            <td>TDS</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WA</th>
+                            <td>120.00 </td>
+                            <td>LOP</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CA</th>
+                            <td>0.00 </td>
+                            <td>PT</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CCA</th>
+                            <td>0.00 </td>
+                            <td>SPL. Deduction</td>
+                            <td>500.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">MA</th>
+                            <td>3000.00</td>
+                            <td>EWF</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sales Incentive</th>
+                            <td>0.00</td>
+                            <td>CD</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Leave Encashment</th>
+                            <td>0.00</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Holiday Wages</th>
+                            <td>500.00</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Special Allowance</th>
+                            <td>100.00</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Bonus</th>
+                            <td>1400.00</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Individual Incentive</th>
+                            <td>2400.00</td>
+                            <td colspan="2"></td>
+                        </tr> -->
+                                <tr class="border-top">
+                                    <th scope="row">Total Earning</th>
+                                    <td>₹ {{totalEarning}}</td>
+                                    <th>Total Deductions</th>
+                                    <td>₹ {{totalDeduction}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-4"> <br> <span class="fw-bold">Net Pay : ₹ {{netSalary}}</span> </div>
+                        <div class="border col-md-8">
+                            <div class="d-flex flex-column"> <small style="color: #666;">In Words</small>
+                                <span>{{capitalizedWords}}</span> </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end text-center mt-5">
+                        <div class="d-flex flex-column mt-2"> <span class="fw-bolder">For {{companyName}}</span> <span
+                                class="mt-4">Authorised Signatory</span><span><em>{{currentDate}}</em></span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <app-footer></app-footer>
+</div>
+<!-- 
+<div class="container mt-2" id="content" #content style="height: 100vh;">
+    <div class="d-flex  align-items-center justify-content-between flex-column mt-4">
+        <h2 class="mt-2 mb-0">{{companyName}}</h2>
+        <em class="my-0">{{Address}}</em>
+        <p class="mb-4">Pay Slip For {{currentDate | date: 'dd-MM-yyyy'}}</p>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+        <div class="m-25p">
+            <div class="row">
+                <div class="col-6">
+                    <p>Name of Employee : {{name}}</p>
+                </div>
+                <div class="col-6">
+                    <p>UAN : {{uan}}</p>
+                </div>
+                <div class="col-6">
+                    <p>Employee ID : {{employeeId}}</p>
+                </div>
+                <div class="col-6">
+                    <p>PFNo : {{pfno}}</p>
+                </div>
+                <div class="col-6">
+                    <p>Degisnation : {{designation}}</p>
+                </div>
+                <div class="col-6">
+                    <p>ESINo : {{esino}}</p>
+                </div>
+                <div class="col-6">
+                    <p>Department : {{departmentName}}</p>
+                </div>
+                <div class="col-6">
+                    <p>Bank Name : {{bankName}}</p>
+                </div>
+                <div class="col-6">
+                    <p>DOJ : {{date}}</p>
+                </div>
+
+                <div class="col-6">
+                    <p>Account No : {{bankAcno}}</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row text-center mt-4">
+            <div class="col-6"><h3>Earning</h3></div>
+            <div class="col-6"><h3>Deduction</h3></div>
+        </div>
+
+        <div class="m-25p mt-3">
+            <div class="row">
+                <div class="col-6">
+                    <p>Basic Wage : ₹{{basicPay}}</p>
+                </div>
+                <div class="col-6">
+                    <p>EPF : ₹{{epf}}
+                </div>
+                <div class="col-6">
+                    <p>HRA : ₹{{hra}}
+                </div>
+                <div class="col-6">
+                    <p>ESI : ₹{{esi}}
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row text-center mt-4">
+            <div class="col-6"><h3>Total Earning : ₹{{totalEarning}}</h3></div>
+            <div class="col-6"><h3>Total Deduction : : ₹{{totalDeduction}}</h3></div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <div class="col-12  mb-4"><h3>Net Salary : ₹{{netSalary}}</h3></div>
+        </div>
+
+    </div>
+</div> -->
