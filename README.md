@@ -1,4 +1,4 @@
-# BankEmpAngProj
+![Screenshot (195)](https://github.com/therealrawat/Blog75Website/assets/96872823/fe9347bf-485d-4ea6-a2a0-4317719b5df6)# BankEmpAngProj
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.3.
 
@@ -22,6 +22,20 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+
 ## Further help
 
+
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Here are few sc of the app:
+![Screenshot (205)](https://github.com/therealrawat/Blog75Website/assets/96872823/633f662e-7933-485f-bce1-5c3f5dcf1663)
+![Screenshot (208)](https://github.com/therealrawat/Blog75Website/assets/96872823/6ad7268c-db83-47bd-98b4-eb68b31f2496)
+![Screenshot (202)](https://github.com/therealrawat/Blog75Website/assets/96872823/35881aec-56d4-4eff-ae14-0c51d275bdc2)
+
+![Screenshot (203)](https://github.com/therealrawat/Blog75Website/assets/96872823/571491a7-a740-411e-8dde-95a7dd56b569)
+
+![Screenshot (204)](https://github.com/therealrawat/Blog75Website/assets/96872823/923e795a-13e3-4e20-989f-9e39ada8087d)
+
+
